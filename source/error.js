@@ -3,7 +3,7 @@ window.onload = function () {
 }
 
 function comeBack(){
-    if(jsonData != undefined && jsonData != null && jsonData.videos != undefined && jsonData.videos != null)
+    if(jsonData && jsonData.videos && jsonData.videos.length)
         window.location.replace("index.html");
     else{
         console.log(jsonData);
