@@ -1,1 +1,28 @@
-this is the manual.txt
+This is how the skate video Server is ment to be used:
+
+There is a folder in the home directory (content_skatevideoserver)that represents the content aviable on the website.
+You can quit, add, rename or whatever you want but changes wont be aplied untill "config" command is executed.
+Into the content_skatevideo server you'll several directories, the one that you want to edit is the "videos" one.
+The other two are automated by the "config" command.
+ 
+
+ **rename-file-guide:
+
+ ~It's important to be carefull while renaming folders beacuse the configuration script takes their namesf for generatin a different download and display name.
+ ~Don't put any spaces on the file name, if you want the file to apear with an space on the websit put an underscore "_".
+ ~Don't put capital Leters, the script will capitalize it for you.
+ ~Don't put any dots or any non alfanumeric symbols.
+
+
+
+ Example:
+
+ 1) Two files are moved to the content_skatevdieoserver/videos/ directory, three files are removed from there, and 4 of them had been renamed.
+ 2) Client-side: anithing happend to the website.
+ 3) "config" command has been executed.
+ 4) New videos apeared, old videos dissapeared and renamed ones apeare with the updatedname. Compressed files has been updated to the lastet listo fo videos.
+
+
+Thank you! For testing Skate Video Server.
+Do not forget to Say Hi! to Croqueto. 
+ .

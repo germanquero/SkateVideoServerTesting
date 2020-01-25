@@ -79,6 +79,7 @@ else
         mkdir $HOME/content_skatevideoserver
 	    mkdir $HOME/content_skatevideoserver/videos $HOME/content_skatevideoserver/compressed
         cp $content_dir/* $HOME/content_skatevideoserver/videos/
+        ln -s $HOME/content_skatevideoserver /var/www/skatevideoserver/content_skatevideoserver 
 
         ## configure server apache-config files
         cp $source_dir/skatevideoserver.conf /etc/apache2/sites-available/
