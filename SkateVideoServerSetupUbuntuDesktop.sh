@@ -77,13 +77,12 @@ else
 
         ## put videos and comrpessed files in place
         mkdir $HOME/content_skatevideoserver
-	mkdir $HOME/content_skatevideoserver/videos $HOME/content_skatevideoserver/compressed
+	    mkdir $HOME/content_skatevideoserver/videos $HOME/content_skatevideoserver/compressed
         cp $content_dir/* $HOME/content_skatevideoserver/videos/
 
         ## configure server apache-config files
         cp $source_dir/skatevideoserver.conf /etc/apache2/sites-available/
-        rm /etc/apache2/sites-enabled/*
-        ln -s /etc/apahce2/sites-available/skatevideoserver.conf /etc/apache2/sites-enabled/skatevideoserver.conf
+        a2ensite skatevideoserver.conf
         echo "127.0.0.1 skatevideoserver" >> /etc/hosts
 
 
