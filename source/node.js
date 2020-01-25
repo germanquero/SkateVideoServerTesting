@@ -28,7 +28,7 @@ var stats;
 var extension;
 let jsonLine;
 
-fs.writeFileSync($backendDirectory, "{\"videos\":[");
+fs.writeFileSync(backendDirectory, "{\"videos\":[");
 
 for (let i = 0; i < videoPath.length; ++i){
     console.logs(i);
@@ -43,9 +43,9 @@ for (let i = 0; i < videoPath.length; ++i){
         size: videoSize[i],
         downlaod: videoDownload[i]
     }
-    fs.appendFileSync($backendDirectory, JSON.stringify(jsonLine));
+    fs.appendFileSync(backendDirectory, JSON.stringify(jsonLine));
     if (i != (videoPath.length - 1))
-        fs.appendFileSync($backendDirectory, ",");
+        fs.appendFileSync(backendDirectory, ",");
 }
 
 fs.appendFileSync($backendDirectory, "],\"compressed\":[");
@@ -63,14 +63,14 @@ for (let i = 0; i < compressedPath.length; ++i){
         size: compressedSize[i],
         downlaod: compressedDownload[i]
     }
-    fs.appendFileSync($backendDirectory, JSON.stringify(jsonLine));
+    fs.appendFileSync(backendDirectory, JSON.stringify(jsonLine));
     if (i != (compressedPath.length - 1))
-        fs.appendFileSync($backendDirectory, ",");
+        fs.appendFileSync(backendDirectory, ",");
 }
 
-fs.appendFileSync($backendDirectory, "]}");
+fs.appendFileSync(backendDirectory, "]}");
 
-fs.writeFileSync(scriptDirectory, "var jsonData = " + fs.readFileSync($backendDirectory, "utf-8"));
+fs.writeFileSync(scriptDirectory, "var jsonData = " + fs.readFileSync(backendDirectory, "utf-8"));
 
 console.log("VIDEO NAMES: ");
 console.log(videoName);
