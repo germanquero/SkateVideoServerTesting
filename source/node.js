@@ -68,7 +68,7 @@ for (let i = 0; i < compressedPath.length; ++i){
 
 fs.appendFileSync("videos.json", "]}");
 
-fs.writeFyleSync(scriptDirectory, "var jsonData = " + fs.readFileSync("videos.json", "utf-8"));
+fs.writeFileSync(scriptDirectory, "var jsonData = " + fs.readFileSync("videos.json", "utf-8"));
 
 console.log("VIDEO NAMES: ");
 console.log(videoName);
