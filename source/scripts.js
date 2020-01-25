@@ -3,7 +3,7 @@ window.onload = function () {
     drawButtons();
 }
 
-function chechJson(){
+function checkJson(){
     if(jsonData == undefined || jsonData == null || jsonData.compressed.length == 0 || jsonData.videos.length == 0 || jsonData.length == 0 ){
         window.location.replace("error.html");
     }

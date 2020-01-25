@@ -46,7 +46,7 @@ for (let i = 0; i < videoPath.length; ++i){
         fs.appendFileSync("videos.json", ",");
 }
 
-fs.appendFileSync("videos.json", "\"compressed\":[");
+fs.appendFileSync("videos.json", "],\"compressed\":[");
 
 for (let i = 0; i < compressedPath.length; ++i){
     extension = compressedPath[i].replace(/^(.*?)\./, "");
