@@ -51,7 +51,7 @@ fs.appendFileSync("videos.json", "\"compressed\":[");
 for (let i = 0; i < compressedPath.length; ++i){
     extension = compressedPath[i].replace(/^(.*?)\./, "");
     compressedDownload.push("Skate Videos (All)." + extension);
-    comrpessedName.push("Download All (." + extension + ")");
+    compressedName.push("Download All (." + extension + ")");
     compressedPath[i] = compressedDirectory + compressedPath[i];
     stats = fs.statSync(compressedPath[i]);
     compressedSize.push((stats.size / 1000000.0).toString().replace(/\.[^/.]+$/,"") + "Mb.");
