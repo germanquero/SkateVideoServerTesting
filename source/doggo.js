@@ -4,7 +4,7 @@ function doggoSalutesBack(){
 }
 
 function doggoGetsBored(){
-    doccument.querySelector(".greetings").innerHTML = "Croqueto gets bored and goes away...";
+    document.querySelector(".greetings").innerHTML = "Croqueto gets bored and goes away...";
     document.querySelector(".croqueto").style.display = "none";
     setTimeout(function (){document.querySelector(".greetings").style.display = "none" ;}, 1200);
 }
