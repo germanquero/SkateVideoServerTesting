@@ -4,7 +4,7 @@
 prechoice=$1
 commit=0
 
-if [ $prechoice == "--assume-yes" ]; then
+if [[ $prechoice == "--assume-yes" ]]; then
     commit=1
 else
     while true; do
