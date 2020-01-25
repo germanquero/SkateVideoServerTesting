@@ -4,7 +4,7 @@ window.onload = function () {
 }
 
 function checkJson(){
-    if(jsonData == undefined || jsonData == null || jsonData.compressed.length == 0 || jsonData.videos.length == 0 || jsonData.length == 0 ){
+    if(jsonData == undefined || jsonData == null || jsonData.compressed == undefined || jsonData.compressed == null || jsonData.videos == undefined || jsonData.videos == null){
         window.location.replace("error.html");
     }
 }
