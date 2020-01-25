@@ -27,7 +27,7 @@ var stats;
 var extension;
 let jsonLine;
 
-fs.writeFileSync("videos.json", "{\"videos \":[");
+fs.writeFileSync("videos.json", "{\"videos\":[");
 
 for (let i = 0; i < videoPath.length; ++i){
     console.logs(i);
