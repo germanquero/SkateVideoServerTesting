@@ -42,8 +42,8 @@ else
 
         ## put frontend files in place
         mkdir /var/www/skatevideoserver 
-        mkdir /var/www/skatevideoserver/css /var/www/skatevideoserver/scripts /var/www/skatevideoserver/images /var/www/skatevideoserver/html
-        cp $source_dir/index.html /var/www/skatevideoserver/html
+        mkdir /var/www/skatevideoserver/css /var/www/skatevideoserver/scripts /var/www/skatevideoserver/images
+        cp $source_dir/index.html /var/www/skatevideoserver/
         cp $source_dir/error.html /var/www/skatevideoserver/
         cp $source_dir/master.css /var/www/skatevideoserver/css/
         cp $source_dir/desktops.css /var/www/skatevideoserver/css/
@@ -86,12 +86,6 @@ else
         sudo a2dissite 000-default.conf
         systemctl reload apache2
         echo "127.0.0.1 skatevideoserver" >> /etc/hosts
-
-
-        ## set custom wallpaper
-        mkdir $HOME/.wallpaper
-        cp $source_dir/wallpaper.png $HOME/.wallpaper
-        gsettings set org.gnome.desktop.background picture-uri file:///$HOME/.wallpaper/wallpaper.png
 
     	## start services
 	    service apache2 start
