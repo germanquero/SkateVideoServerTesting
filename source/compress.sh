@@ -8,7 +8,7 @@ echo "Removing deprecated compressed files..."
 rm ${compressedDirectory}*
 echo "Creating .zip file..."
 zip -r "${compressedDirectory}${name}.zip" $videoDirectory
-echo "Creating .ar.gz file..."
+echo "Creating .tar.gz file..."
 tar -czvf "${compressedDirectory}${name}.tar.gz" ${videoDirectory}*
 
 ## uncomment for testing
