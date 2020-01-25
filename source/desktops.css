@@ -1,0 +1,25 @@
+@media only screen and (min-width: 769px) and (max-width: 992px){
+    .outer3{
+        display: none;
+    }
+
+    .title{
+        font-size: 50px;
+    }
+
+    .downloadButton{
+        height: 50px;
+    }
+
+    .error{
+        flex-direction: column;
+    }
+
+    .errorImg{
+        height: 450px;
+    }
+
+    .errorMsg{
+        font-size: 75px;
+    }
+}

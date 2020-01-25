@@ -1,0 +1,175 @@
+body{
+    margin:20px;
+    background-color: #4abdac;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+footer{
+    margin-top: 200px;
+    margin-bottom: 35px;
+}
+
+.text{
+    color: black;
+    text-shadow: 4px 4px 4px #8d8c8e;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.image{
+    filter: drop-shadow(4px 4px 4px #8d8c8e);
+}
+
+.skate{
+    height: 100px;
+}
+
+.title{
+    font-size: 55px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.ending{
+    display: flex;
+    justify-content: center;
+}
+
+.decoration{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sign{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+}
+
+.signPart{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 5px;
+}
+
+.signIcon{
+    height: 20px;
+    margin-right: 5px;
+}
+
+.github{
+    color:black;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.github:hover{
+    color: #c862c8;
+}
+
+.github:active{
+    color: #f7b733;
+}
+
+.downloadButton{
+    display: flex;
+    height: 45px;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    background-color: #dfdce3;
+    border: none;
+    box-shadow: 4px 4px 4px  #8d8c8e;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 5px;
+    transition: 0.25s;
+}
+
+.all{
+    background-color: #f7b733;
+}
+
+.downloadButton:hover{
+    background-color: #f7b733;
+}
+
+.all:hover{
+    background-color: #c862c8;
+}
+
+.downloadIcon{
+    margin: 30px;
+    margin-right: 30px;
+}
+
+.fileName{
+    font-size: 20px;
+    text-align: center;
+}
+
+.weight{
+    font-size: 14px;
+    width: 100px;
+    text-align: right;
+}
+
+.download{
+    display: flex;
+    flex-direction: column;
+}
+
+.croqueto{
+    height: 30px;
+}
+
+.doggo{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5px;
+}
+
+.doggoButton{
+    background: transparent;
+    border: none;
+}
+
+.greetings{
+    font-size: 12px;
+}
+
+.error{
+    display: flex;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.errorImg{
+    height: 500px;
+    margin: 10px;
+    margin-bottom: 200px;
+}
+
+.errorMsg{
+    font-size: 80px;
+    font-weight: bold;
+    margin-bottom: 200px;
+}
