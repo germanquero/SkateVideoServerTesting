@@ -1,3 +1,13 @@
+
+
+
+
+
+                        WELCOME TO THE SKATE VIDEO SERVER TEST PROGRAM
+
+
+
+
 This is how the skate video Server is ment to be used:
 
 There is a folder in the home directory (content_skatevideoserver)that represents the content aviable on the website.
@@ -25,4 +35,7 @@ The other two are automated by the "config" command.
 
 Thank you! For testing Skate Video Server.
 Do not forget to Say Hi! to Croqueto. 
+ 
+ 
+ 
  .

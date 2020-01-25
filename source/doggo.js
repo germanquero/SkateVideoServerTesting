@@ -1,6 +1,6 @@
 function doggoSalutesBack(){
     document.querySelector(".greetings").innerHTML = "Woof-Woof! (Croqueto says Hi back)";
-    document.querySelector(".doggoButton").innerHTML.setAttribute("onclick", "javascript: doggoGetsBored();");
+    document.querySelector(".doggoButton").setAttribute("onclick", "javascript: doggoGetsBored();");
 }
 
 function doggoGetsBored(){
