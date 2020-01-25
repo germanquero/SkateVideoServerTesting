@@ -11,9 +11,10 @@ function capitalizeStr(str){
 }
 
 const homedir = require("os").homedir();
-var videoDirectory = homedir+"/content_skatevideoserver/videos";
+var videoDirectory = homedir+"/content_skatevideoserver/videos/";
 var compressedDirectory = homedir+"/content_skatevideoserver/compressed/";
 var scriptDirectory = "/var/www/skatevideoserver/scripts/json.js";
+var backendDirectory = homedir+"/backend_skatevideoserver/videos.json"
 var fs = require('fs');
 var videoPath= fs.readdirSync(videoDirectory);
 var compressedPath= fs.readdirSync(compressedDirectory);
@@ -27,7 +28,7 @@ var stats;
 var extension;
 let jsonLine;
 
-fs.writeFileSync("videos.json", "{\"videos\":[");
+fs.writeFileSync($backendDirectory, "{\"videos\":[");
 
 for (let i = 0; i < videoPath.length; ++i){
     console.logs(i);
@@ -42,12 +43,12 @@ for (let i = 0; i < videoPath.length; ++i){
         size: videoSize[i],
         downlaod: videoDownload[i]
     }
-    fs.appendFileSync("videos.json", JSON.stringify(jsonLine));
+    fs.appendFileSync($backendDirectory, JSON.stringify(jsonLine));
     if (i != (videoPath.length - 1))
-        fs.appendFileSync("videos.json", ",");
+        fs.appendFileSync($backendDirectory, ",");
 }
 
-fs.appendFileSync("videos.json", "],\"compressed\":[");
+fs.appendFileSync($backendDirectory, "],\"compressed\":[");
 
 for (let i = 0; i < compressedPath.length; ++i){
     extension = compressedPath[i].replace(/^(.*?)\./, "");
@@ -62,14 +63,14 @@ for (let i = 0; i < compressedPath.length; ++i){
         size: compressedSize[i],
         downlaod: compressedDownload[i]
     }
-    fs.appendFileSync("videos.json", JSON.stringify(jsonLine));
+    fs.appendFileSync($backendDirectory, JSON.stringify(jsonLine));
     if (i != (compressedPath.length - 1))
-        fs.appendFileSync("videos.json", ",");
+        fs.appendFileSync($backendDirectory, ",");
 }
 
-fs.appendFileSync("videos.json", "]}");
+fs.appendFileSync($backendDirectory, "]}");
 
-fs.writeFileSync(scriptDirectory, "var jsonData = " + fs.readFileSync("videos.json", "utf-8"));
+fs.writeFileSync(scriptDirectory, "var jsonData = " + fs.readFileSync($backendDirectory, "utf-8"));
 
 console.log("VIDEO NAMES: ");
 console.log(videoName);

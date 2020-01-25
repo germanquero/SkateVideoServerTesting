@@ -14,7 +14,7 @@ else
     zip -r "${compressed_directory}${name}.zip" $video_directory
     echo "Creating .tar.gz file..."
     tar -czvf "${compressed_directory}${name}.tar.gz" ${video_directory}*
-di
-## uncomment for testing
-# echo "Creating .tar file..."
-# tar -cvf "${compressedDirectory}${name}.tar" $videoDrectory*
+    ## uncomment for testing
+    # echo "Creating .tar file..."
+    # tar -cvf "${compressedDirectory}${name}.tar" $videoDrectory*
+fi
