@@ -4,7 +4,7 @@ window.onload = function () {
 }
 
 function checkJson(){
-    if(!jsonData || !jsonData.videos)
+    if(!jsonData || !jsonData.videos || !jsonData.videos.length)
         window.location.replace("error.html");
 }
 
