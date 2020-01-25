@@ -14,7 +14,7 @@ if [ "$EUID" -ne 0 ];then
     echo "Please run as root"
 else
     while true; do
-        read -p "Please make sure you internet conection and enough battery life to proceed. Continue (y/n)?" choice
+        read -p "Please make sure your system has internet conection and enough battery life to proceed. Continue (y/n)?" choice
         case "$choice" in 
         y|Y )
             install=1
