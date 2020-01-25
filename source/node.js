@@ -11,11 +11,11 @@ function capitalizeStr(str){
 }
 
 const homedir = require("os").homedir();
-var videoDirectory = homedir+"/content_skatevideoserver/videos/";
+var videoDirectory = homedir+"/content_skatevideoserver/videos";
 var compressedDirectory = homedir+"/content_skatevideoserver/compressed/";
 var scriptDirectory = "/var/www/skatevideoserver/scripts/json.js";
 var fs = require('fs');
-var videoPath= fs.readdirSync(videoDirectory);
+var videoPath= fs.readdirSync(videoDirectoryf);
 var compressedPath= fs.readdirSync(compressedDirectory);
 var videoName = [];
 var compressedName = [];
