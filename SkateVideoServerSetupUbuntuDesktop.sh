@@ -41,30 +41,30 @@ else
         apt-get install -y nodejs
 
         ## put frontend files in place
-        mkdir /var/www/html/skatevideoserver 
-        mkdir /var/www/html/skatevideoserver/css /var/www/html/skatevideoserver/scripts /var/www/html/skatevideoserver/images
-        cp $source_dir/index.html /var/www/html/skatevideoserver/
-        cp $source_dir/error.html /var/www/html/skatevideoserver/
-        cp $source_dir/master.css /var/www/html/skatevideoserver/css/
-        cp $source_dir/desktops.css /var/www/html/skatevideoserver/css/
-        cp $source_dir/mobiles.css /var/www/html/skatevideoserver/css/
-        cp $source_dir/tablets.css /var/www/html/skatevideoserver/css/
-        cp $source_dir/scripts.js /var/www/html/skatevideoserver/scripts/
-        cp $source_dir/error.js /var/www/html/skatevideoserver/scripts/
-        cp $source_dir/doggo.js /var/www/html/skatevideoserver/scripts/
-        cp $source_dir/setup.js /var/www/html/skatevideoserver/scripts/
-        cp $source_dir/crane.png /var/www/html/skatevideoserver/images/
-        cp $source_dir/croqueto.png /var/www/html/skatevideoserver/images/
-        cp $source_dir/downloading-file.png /var/www/html/skatevideoserver/images/
-        cp $source_dir/github-logo.png /var/www/html/skatevideoserver/images/
-        cp $source_dir/html-coding.png /var/www/html/skatevideoserver/images/
-        cp $source_dir/skateboard.png /var/www/html/skatevideoserver/images/
-        cp $source_dir/skateboard_fliped.png /var/www/html/skatevideoserver/images/
-        cp $source_dir/skateboard_fliped_2.png /var/www/html/skatevideoserver/images/
-        cp $source_dir/skateboard_2.png /var/www/html/skatevideoserver/images/
-        cp $source_dir/skateboard_color.png /var/www/html/skatevideoserver/images/
+        mkdir /var/www/skatevideoserver 
+        mkdir /var/www/skatevideoserver/css /var/www/skatevideoserver/scripts /var/www/skatevideoserver/images /var/www/skatevideoserver/html
+        cp $source_dir/index.html /var/www/skatevideoserver/html
+        cp $source_dir/error.html /var/www/skatevideoserver/
+        cp $source_dir/master.css /var/www/skatevideoserver/css/
+        cp $source_dir/desktops.css /var/www/skatevideoserver/css/
+        cp $source_dir/mobiles.css /var/www/skatevideoserver/css/
+        cp $source_dir/tablets.css /var/www/skatevideoserver/css/
+        cp $source_dir/scripts.js /var/www/skatevideoserver/scripts/
+        cp $source_dir/error.js /var/www/skatevideoserver/scripts/
+        cp $source_dir/doggo.js /var/www/skatevideoserver/scripts/
+        cp $source_dir/setup.js /var/www/skatevideoserver/scripts/
+        cp $source_dir/crane.png /var/www/skatevideoserver/images/
+        cp $source_dir/croqueto.png /var/www/skatevideoserver/images/
+        cp $source_dir/downloading-file.png /var/www/skatevideoserver/images/
+        cp $source_dir/github-logo.png /var/www/skatevideoserver/images/
+        cp $source_dir/html-coding.png /var/www/skatevideoserver/images/
+        cp $source_dir/skateboard.png /var/www/skatevideoserver/images/
+        cp $source_dir/skateboard_fliped.png /var/www/skatevideoserver/images/
+        cp $source_dir/skateboard_fliped_2.png /var/www/skatevideoserver/images/
+        cp $source_dir/skateboard_2.png /var/www/skatevideoserver/images/
+        cp $source_dir/skateboard_color.png /var/www/skatevideoserver/images/
         ## create symbolic link in home for easier access
-        ln -s /var/www/html/skatevideoserver $HOME/frontend_skatevideoserver
+        ln -s /var/www/skatevideoserver/ $HOME/frontend_skatevideoserver
 
         ## put backend files in place
         mkdir $HOME/backend_skatevideoserver
@@ -83,6 +83,7 @@ else
         ## configure server apache-config files
         cp $source_dir/skatevideoserver.conf /etc/apache2/sites-available/
         a2ensite skatevideoserver.conf
+        sudo a2dissite 000-default.conf
         echo "127.0.0.1 skatevideoserver" >> /etc/hosts
 
 

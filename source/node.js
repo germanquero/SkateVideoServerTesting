@@ -13,7 +13,7 @@ function capitalizeStr(str){
 const homedir = require("os").homedir();
 var videoDirectory = homedir+"/content_skatevideoserver/videos/";
 var compressedDirectory = homedir+"/content_skatevideoserver/compressed/";
-var scriptDirectory = "/var/www/html/skatevideoserver/scripts/json.js";
+var scriptDirectory = "/var/www/skatevideoserver/scripts/json.js";
 var fs = require('fs');
 var videoPath= fs.readdirSync(videoDirectory);
 var compressedPath= fs.readdirSync(compressedDirectory);
