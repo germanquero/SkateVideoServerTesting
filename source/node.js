@@ -50,22 +50,24 @@ for (let i = 0; i < videoPath.length; ++i){
 
 fs.appendFileSync(backendDirectory, "],\"compressed\":[");
 
-for (let i = 0; i < compressedPath.length; ++i){
-    extension = compressedPath[i].replace(/^(.*?)\./, "");
-    compressedDownload.push("Skate Videos (All)." + extension);
-    compressedName.push("Download All (." + extension + ")");
-    compressedPath[i] = compressedDirectory + compressedPath[i];
-    stats = fs.statSync(compressedPath[i]);
-    compressedSize.push((stats.size / 1000000.0).toString().replace(/\.[^/.]+$/,"") + "Mb.");
-    jsonLine = {
-        name: compressedName[i],
-        path: compressedPath[i],
-        size: compressedSize[i],
-        downlaod: compressedDownload[i]
+if (videoPath.length >= 2){
+    for (let i = 0; i < compressedPath.length; ++i){
+        extension = compressedPath[i].replace(/^(.*?)\./, "");
+        compressedDownload.push("Skate Videos (All)." + extension);
+        compressedName.push("Download All (." + extension + ")");
+        compressedPath[i] = compressedDirectory + compressedPath[i];
+        stats = fs.statSync(compressedPath[i]);
+        compressedSize.push((stats.size / 1000000.0).toString().replace(/\.[^/.]+$/,"") + "Mb.");
+        jsonLine = {
+            name: compressedName[i],
+            path: compressedPath[i],
+            size: compressedSize[i],
+            downlaod: compressedDownload[i]
+        }
+        fs.appendFileSync(backendDirectory, JSON.stringify(jsonLine));
+        if (i != (compressedPath.length - 1))
+            fs.appendFileSync(backendDirectory, ",");
     }
-    fs.appendFileSync(backendDirectory, JSON.stringify(jsonLine));
-    if (i != (compressedPath.length - 1))
-        fs.appendFileSync(backendDirectory, ",");
 }
 
 fs.appendFileSync(backendDirectory, "]}");

@@ -4,7 +4,7 @@ window.onload = function () {
 }
 
 function checkJson(){
-    if(jsonData == undefined || jsonData == null || jsonData.videos == undefined || jsonData.videos == null)
+    if(!jsonData || !jsonData.videos)
         window.location.replace("error.html");
 }
 
