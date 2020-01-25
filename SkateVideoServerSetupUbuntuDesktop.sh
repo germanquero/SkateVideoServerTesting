@@ -84,6 +84,7 @@ else
         cp $source_dir/skatevideoserver.conf /etc/apache2/sites-available/
         a2ensite skatevideoserver.conf
         sudo a2dissite 000-default.conf
+        systemctl reload apache2
         echo "127.0.0.1 skatevideoserver" >> /etc/hosts
 
 
