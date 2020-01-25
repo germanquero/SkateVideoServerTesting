@@ -31,7 +31,7 @@ if [ $commit -eq 0 ]; then
     echo "Closing..."
 else
     echo "Creating compressed files."
-    ./$HOME/backend_skatevideoserver/compress.sh
-    echo "Overwritting json"
-    ./$HOME/backend_skatevideoserver/node.js
+    sh $HOME/backend_skatevideoserver/compress.sh
+    echo "Overwritting json."
+    nodejs $HOME/backend_skatevideoserver/node.js
 fi

@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-videoDirectory = "$HOME/content_skatevideoserver/videos/"
-compressedDirectory = "$HOME/content_skatevideoserver/compressed/"
-name = "skate_videos"
+videoDirectory="$HOME/content_skatevideoserver/videos/"
+compressedDirectory="$HOME/content_skatevideoserver/compressed/"
+name="skate_videos"
 
 echo "Removing deprecated compressed files..."
 rm ${compressedDirectory}*
