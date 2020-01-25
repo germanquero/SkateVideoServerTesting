@@ -84,6 +84,7 @@ else
         cp $source_dir/skatevideoserver.conf /etc/apache2/sites-available/
         rm /etc/apache2/sites-enabled/*
         ln -s /etc/apahce2/sites-available/skatevideoserver.conf /etc/apache2/sites-enabled/skatevideoserver.conf
+        echo "127.0.0.1 skatevideoserver" >> /etc/hosts
 
 
         ## set custom wallpaper
