@@ -1,22 +1,22 @@
 #!/usr/bin/env bash
 
 
-prechoice = $1
-commit = 0
+prechoice=$1
+commit=0
 
-if ($prechoice == "--assume-yes"); then
-    commit = 1
+if [ $prechoice == "--assume-yes" ]; then
+    commit=1
 else
     while true; do
             read -p "You will commit changes are you sure (y/n)?" choice
             case "$choice" in 
             y|Y )
-                commit = 1
+                commit=1
                 break
             ;;
 
             n|N )
-                commit = 0
+                commit=0
                 break
             ;;
             * )
@@ -27,7 +27,7 @@ else
         done
 fi
 
-if ($commit -eq 0); then
+if [ $commit -eq 0 ]; then
     echo "Closing..."
 else
     echo "Creating compressed files."
