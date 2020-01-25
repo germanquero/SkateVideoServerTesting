@@ -1,22 +1,21 @@
 #!/usr/bin/env bash
 
-source_dir = $(echo $(dirname $0)"/source")
-content_dir = $(echo $(dirname $0)"/content")
+source_dir=$(echo $(dirname $0)"/source")
+content_dir=$(echo $(dirname $0)"/content")
 
-
-if (whoami != root)
+if [ "$EUID" -ne 0 ]
   then echo "Please run as root"
     else
     while true; do
         read -p "Please make sure you internet conection and enough battery life to proceed. Continue (y/n)?" choice
         case "$choice" in 
         y|Y )
-            install = 1
+            install=1
             break
         ;;
 
         n|N )
-            install = 0
+            install=0
             break
         ;;
         * )
@@ -26,7 +25,7 @@ if (whoami != root)
         esac
     done
 
-    if ($install -eq 1); then
+    if [ $install -eq 1 ]; then
         ## check for updates
         apt-get update -y
 
@@ -90,7 +89,7 @@ if (whoami != root)
         cp $source_dir/manual.txt $HOME/
     
     else
-        echo "CLosing..."
+        echo "Closing..."
     fi
 
         
