@@ -19,7 +19,7 @@ function drawButtons(){
         </a>`;
     }
     for(var i = 0; i < jsonData.videos.length; ++i){
-        onsole.log(jsonData.videos[i].size);
+        console.log(jsonData.videos[i].size);
         document.querySelector(".video").innerHTML += `
         <a class="downloadButton" href="${jsonData.videos[i].path}" download="${jsonData.videos[i].download}">
         <div><img src="images/downloading-file.png" alt="X" class="image downloadIcon"></div>
