@@ -31,7 +31,7 @@ let jsonLine;
 fs.writeFileSync(backendDirectory, "{\"videos\":[");
 
 for (let i = 0; i < videoPath.length; ++i){
-    videoDownload.push(capitalizeStr(videoPath[i].replace(/.*\//,"").replace(/_/g,"")));
+    videoDownload.push(capitalizeStr(videoPath[i].replace(/.*\//,"").replace(/_/g," ")));
     videoName.push(videoDownload[i].replace(/\.[^/.]+$/,""));
     videoPath[i] = videoDirectory + videoPath[i];
     stats = fs.statSync(videoPath[i]);

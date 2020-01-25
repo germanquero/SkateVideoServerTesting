@@ -10,6 +10,7 @@ function checkJson(){
 
 function drawButtons(){
     for(var i = 0; i < jsonData.compressed.length; ++i){
+        console.log(jsonData.compressed[i].size);
         document.querySelector(".compressed").innerHTML += `
         <a class="downloadButton all" href="${jsonData.compressed[i].path}" download="${jsonData.compressed[i].download}">
         <div><img src="images/downloading-file.png" alt="X" class="image downloadIcon"></div>
@@ -18,6 +19,7 @@ function drawButtons(){
         </a>`;
     }
     for(var i = 0; i < jsonData.videos.length; ++i){
+        onsole.log(jsonData.videos[i].size);
         document.querySelector(".video").innerHTML += `
         <a class="downloadButton" href="${jsonData.videos[i].path}" download="${jsonData.videos[i].download}">
         <div><img src="images/downloading-file.png" alt="X" class="image downloadIcon"></div>
