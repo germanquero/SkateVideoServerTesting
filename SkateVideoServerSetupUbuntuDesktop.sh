@@ -88,12 +88,12 @@ else
 
 
         ## set custom wallpaper
-        gsettings set org.gnome.desktop.background picture-uri file:///$source_dir/wallpaper.png
         mkdir $HOME/.wallpaper
         cp $source_dir/wallpaper.png $HOME/.wallpaper
-        
-	## start services
-	service apache2 start
+        gsettings set org.gnome.desktop.background picture-uri file:///$HOME/.wallpaper/wallpaper.png
+
+    	## start services
+	    service apache2 start
 
         ## demo of web page
         config --assume-yes
