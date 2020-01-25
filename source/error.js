@@ -8,4 +8,6 @@ function comeBack(){
     }
     else
         console.log(jsonData);
+        console.log(jsonData.compressed);
+        console.log(jsonData.videos);
 }
