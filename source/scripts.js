@@ -22,7 +22,7 @@ function drawButtons(){
         <a class="downloadButton" href="${jsonData.videos[i].path}" download="${jsonData.videos[i].download}">
         <div><img src="images/downloading-file.png" alt="X" class="image downloadIcon"></div>
         <div class="text fileName">${jsonData.videos[i].name}</div>
-        <div class="text weightW>${jsonData.videos[i].size}</div>
+        <div class="text weight">${jsonData.videos[i].size}</div>
         </a>`;
     }
 }
