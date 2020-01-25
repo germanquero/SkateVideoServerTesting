@@ -10,7 +10,7 @@ function checkJson(){
 
 function drawButtons(){
     for(var i = 0; i < jsonData.videos.length; ++i){
-        document.querySelector(".compressed").innerHTML += `
+        document.querySelector(".video").innerHTML += `
         <a class="downloadButton all" href="${jsonData.compressed[i].path}" download="${jsonData.compressed[i].download}">
         <div><img src="images/downloading-file.png" alt="X" class="image downloadIcon"></div>
         <div class="text fileNAme">${jsonData.compressed[i].name}</div>
