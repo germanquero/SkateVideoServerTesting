@@ -48,7 +48,7 @@ for (let i = 0; i < videoPath.length; ++i){
         fs.appendFileSync(backendDirectory, ",");
 }
 
-fs.appendFileSync($backendDirectory, "],\"compressed\":[");
+fs.appendFileSync(backendDirectory, "],\"compressed\":[");
 
 for (let i = 0; i < compressedPath.length; ++i){
     extension = compressedPath[i].replace(/^(.*?)\./, "");

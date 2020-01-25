@@ -6,7 +6,7 @@ name="skate_videos"
 num_videos=$(ls -l $video_directory | wc -l)
 
 if [ $num_videos -lt 2 ]; then
-    echo "Not enough videos to make compress files"
+    echo "Not enough videos to make compressed files"
 else
     echo "Removing deprecated compressed files..."
     rm ${compressed_directory}*
