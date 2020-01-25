@@ -4,12 +4,11 @@ window.onload = function () {
 }
 
 function checkJson(){
-    if(jsonData == undefined || jsonData == null || jsonData.compressed == undefined || jsonData.compressed == null || jsonData.videos == undefined || jsonData.videos == null){
+    if(jsonData == undefined || jsonData == null || jsonData.videos == undefined || jsonData.videos == null)
         window.location.replace("error.html");
-    }
 }
 
-function drawbuttons(){
+function drawButtons(){
     for(var i = 0; i < jsonData.videos.length; ++i){
         document.querySelector(".compressed").innerHTML += `
         <a class="downloadButton all" href="${jsonData.compressed[i].path}" download="${jsonData.compressed[i].download}">
